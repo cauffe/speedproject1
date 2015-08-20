@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+
+{% block title %}List View{% endblock %}
+
+{% block body %}
+
+	{% for speed_object in speed_objects %}
+		-- i will be repeated for every object in the speed_objects list -- 
+		{{ speed_object.title }} -- <a href="/detail_view/{{ speed_object.pk }}">{{ speed_object.title }}</a>  
+        
+        
+        -- <a href="/update_view/{{ speed_object.pk}}/"> Edit </a> 
+        
+        -- <a href="/delete_view/{{ speed_object.pk}}/">Delete</a>
+
+		</br> 
+
+	{% endfor %}
+
+	</br>
+
+	<a href="/create_view1/">Create A Object</a>
+
+{% endblock %}
